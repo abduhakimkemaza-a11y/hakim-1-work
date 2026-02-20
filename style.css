@@ -366,21 +366,56 @@ body::before {
     opacity: 0.6;
     z-index: 1;
 }
+/* Контейнер лепестков */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none; /* чтобы не мешали кликам */
+    overflow: hidden;
+    z-index: 0; /* позади карточки */
+}
 
-/* Анимация падения */
-@keyframes sakuraFall {
+/* Лепесток */
+.petal {
+    position: absolute;
+    top: -50px;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at 30% 30%, #ffb7da, #ff2e93);
+    border-radius: 60% 40% 60% 40%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Анимация падения с вращением и смещением по X */
+@keyframes fall {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-50px) translateX(0px) rotate(0deg);
     }
     100% {
-        transform: translateY(100%);
+        transform: translateY(110vh) translateX(100px) rotate(360deg);
     }
 }
 
-/* Чтобы карточка была поверх лепестков */
+/* Разные позиции, скорости и задержки для реализма */
+.petal:nth-child(1)  { left: 5%;  animation-duration: 8s;  animation-delay: 0s; }
+.petal:nth-child(2)  { left: 15%; animation-duration: 12s; animation-delay: 2s; }
+.petal:nth-child(3)  { left: 25%; animation-duration: 10s; animation-delay: 4s; }
+.petal:nth-child(4)  { left: 35%; animation-duration: 14s; animation-delay: 1s; }
+.petal:nth-child(5)  { left: 45%; animation-duration: 9s;  animation-delay: 3s; }
+.petal:nth-child(6)  { left: 55%; animation-duration: 11s; animation-delay: 5s; }
+.petal:nth-child(7)  { left: 65%; animation-duration: 13s; animation-delay: 2s; }
+.petal:nth-child(8)  { left: 75%; animation-duration: 7s;  animation-delay: 6s; }
+.petal:nth-child(9)  { left: 85%; animation-duration: 15s; animation-delay: 1s; }
+.petal:nth-child(10) { left: 95%; animation-duration: 10s; animation-delay: 4s; }
+
+/* Карточка поверх лепестков */
 .card {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 
