@@ -102,6 +102,139 @@ span {
     transform: scale(1.05);
     transition: 0.3s ease;
 }
+/* Подключаем красивый шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff4e7a, #ff9ecb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 🌸 Лепестки сакуры */
+body::before,
+body::after {
+    content: "🌸 🌸 🌸 🌸 🌸";
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.15;
+    animation: sakura 20s linear infinite;
+}
+
+body::after {
+    top: 50%;
+    left: 60%;
+    animation-duration: 25s;
+}
+
+@keyframes sakura {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Карточка */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 900px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(255, 0, 100, 0.4);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 40px;
+    color: #ff2e63;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #d81b60;
+    border-bottom: 2px solid #ffb6d5;
+    padding-bottom: 5px;
+}
+
+/* Фото */
+img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 6px solid #ff4e7a;
+    box-shadow: 0 10px 30px rgba(255, 0, 100, 0.5);
+}
+
+/* Информация */
+.info {
+    background: linear-gradient(135deg, #ffe0ec, #ffd6f5);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+span {
+    font-weight: bold;
+    color: #ff2e63;
+}
+
+/* Видео */
+.video {
+    margin: 15px 0;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 0, 100, 0.3);
+    transition: 0.3s ease;
+}
+
+.video iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Музыка */
+.music {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Адаптация под телефон */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .video iframe {
+        height: 200px;
+    }
+}
 
 
 
