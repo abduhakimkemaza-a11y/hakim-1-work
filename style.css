@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-   /* background: linear-gradient(135deg, #1e1e2f, #2b2b45); */
+    background: linear-gradient(135deg, #1e1e2f, #2b2b45); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,6 +368,7 @@ body {
     top: -200px;
     
 }
+
 
 
 
