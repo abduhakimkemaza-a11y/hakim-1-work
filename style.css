@@ -245,7 +245,7 @@ body {
     /* 🌸 Фон сакуры */
     background: 
         linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6)),
-        url("https://images.unsplash.com/photo-1522383225653-ed111181a951");
+        url("https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=1920&q=80");
 
     background-size: cover;
     background-position: center;
@@ -256,7 +256,6 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
 /* Карточка */
 .card {
     background: rgba(255, 255, 255, 0.95);
@@ -411,6 +410,7 @@ body::before {
 .petal:nth-child(8)  { left: 75%; animation-duration: 7s;  animation-delay: 6s; }
 .petal:nth-child(9)  { left: 85%; animation-duration: 15s; animation-delay: 1s; }
 .petal:nth-child(10) { left: 95%; animation-duration: 10s; animation-delay: 4s; }
+
 
 
 
