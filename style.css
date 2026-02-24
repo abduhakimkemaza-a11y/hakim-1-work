@@ -410,6 +410,14 @@ body::before {
 .petal:nth-child(8)  { left: 75%; animation-duration: 7s;  animation-delay: 6s; }
 .petal:nth-child(9)  { left: 85%; animation-duration: 15s; animation-delay: 1s; }
 .petal:nth-child(10) { left: 95%; animation-duration: 10s; animation-delay: 4s; }
+wrapper {
+    min-height: 100vh;
+    background: url("sakura.jpg") no-repeat center center;
+    background-position: center 20%;
+    background-size: cover;
+    top: -200px;
+    
+}
 
 
 
