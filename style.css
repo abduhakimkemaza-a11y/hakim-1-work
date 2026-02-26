@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-color: pink;
 }
 
 /* Карточка профиля */
@@ -120,6 +121,7 @@ a:hover {
         transform: translateX(100px) rotate(360deg);
     }
 }
+
 
 
 
