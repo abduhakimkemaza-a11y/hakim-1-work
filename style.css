@@ -1,385 +1,124 @@
-/* Общий стиль страницы */
+/* Убираем отступы */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2b2b45); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    /* Фон страницы */
+    background-image: url("background.jpg"); /* сюда вставь свою картинку */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Карточка */
+/* Карточка профиля */
 .card {
-    background: #ffffff;
-    width: 900px;
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
     padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    color: white;
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Анимация появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Заголовки */
-h1 {
-    margin-bottom: 10px;
-    font-size: 36px;
-    color: #333;
-}
-
-h2 {
-    margin-top: 30px;
-    color: #444;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
 }
 
 /* Фото */
-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
+.card img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 20px 0;
-    border: 5px solid #6c63ff;
-    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.4);
-}
-
-/* Информация */
-.info {
-    background: #f5f5ff;
-    padding: 15px;
-    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid pink;
     margin-bottom: 20px;
 }
 
-.info p {
-    margin: 8px 0;
-    font-size: 16px;
+/* Заголовки */
+h1, h2 {
+    color: pink;
 }
 
-span {
+/* Текст */
+.info span,
+p span {
     font-weight: bold;
-    color: #6c63ff;
+    color: #ffb6c1;
+}
+
+/* Кнопка Instagram */
+a {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: hotpink;
+    color: white;
 }
 
 /* Видео */
-.video {
-    margin: 15px 0;
-}
-
 .video iframe {
     width: 100%;
     max-width: 400px;
     height: 220px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    border-radius: 15px;
 }
 
-/* Блок музыки */
+/* Музыка блок */
 .music {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
 }
 
-/* Эффект при наведении */
-.video iframe:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
-}
-/* Подключаем красивый шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff4e7a, #ff9ecb);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* 🌸 Лепестки сакуры */
-body::before,
-body::after {
-    content: "🌸 🌸 🌸 🌸 🌸";
-    position: absolute;
-    font-size: 40px;
-    opacity: 0.15;
-    animation: sakura 20s linear infinite;
-}
-
-body::after {
-    top: 50%;
-    left: 60%;
-    animation-duration: 25s;
-}
-
-@keyframes sakura {
-    0% {
-        transform: translateY(-100vh) rotate(0deg);
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
-
-/* Карточка */
-.card {
-    background: rgba(255, 255, 255, 0.95);
-    width: 900px;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(255, 0, 100, 0.4);
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-/* Заголовки */
-h1 {
-    font-size: 40px;
-    color: #ff2e63;
-    margin-bottom: 10px;
-}
-
-h2 {
-    margin-top: 30px;
-    color: #d81b60;
-    border-bottom: 2px solid #ffb6d5;
-    padding-bottom: 5px;
-}
-
-/* Фото */
-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 20px 0;
-    border: 6px solid #ff4e7a;
-    box-shadow: 0 10px 30px rgba(255, 0, 100, 0.5);
-}
-
-/* Информация */
-.info {
-    background: linear-gradient(135deg, #ffe0ec, #ffd6f5);
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-.info p {
-    margin: 8px 0;
-    font-size: 16px;
-}
-
-span {
-    font-weight: bold;
-    color: #ff2e63;
-}
-
-/* Видео */
-.video {
-    margin: 15px 0;
-}
-
-.video iframe {
-    width: 100%;
-    max-width: 400px;
-    height: 220px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(255, 0, 100, 0.3);
-    transition: 0.3s ease;
-}
-
-.video iframe:hover {
-    transform: scale(1.05);
-}
-
-/* Музыка */
-.music {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Адаптация под телефон */
-@media (max-width: 768px) {
-    .card {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .video iframe {
-        height: 200px;
-    }
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-/* Карточка */
-.card {
-    background: rgba(255, 255, 255, 0.95);
-    width: 900px;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(255, 0, 100, 0.4);
-    text-align: center;
-    backdrop-filter: blur(5px);
-}
-
-/* Заголовки */
-h1 {
-    font-size: 40px;
-    color: #ff2e63;
-}
-
-h2 {
-    margin-top: 30px;
-    color: #d81b60;
-    border-bottom: 2px solid #ffb6d5;
-    padding-bottom: 5px;
-}
-
-/* Фото */
-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 20px 0;
-    border: 6px solid #ff4e7a;
-    box-shadow: 0 10px 30px rgba(255, 0, 100, 0.5);
-}
-
-/* Информация */
-.info {
-    background: linear-gradient(135deg, #ffe0ec, #ffd6f5);
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-span {
-    font-weight: bold;
-    color: #ff2e63;
-}
-
-/* Видео сетка */
-.music {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.video iframe {
-    width: 100%;
-    height: 160px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(255, 0, 120, 0.3);
-    transition: 0.3s ease;
-}
-
-.video iframe:hover {
-    transform: scale(1.05);
-}
-
-/* Адаптация под телефон */
-@media (max-width: 768px) {
-    .card {
-        width: 95%;
-        padding: 20px;
-    }
-/* Контейнер для лепестков */
-body::before {
-    content: "";
-    position: fixed;
-    top: -10%;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    pointer-events: none;
-    background-image: 
-        url("https://i.imgur.com/5cX1Z9O.png");
-    background-repeat: repeat;
-    background-size: 50px;
-    animation: sakuraFall 20s linear infinite;
-    opacity: 0.6;
-    z-index: 1;
-}
-/* Контейнер лепестков */
+/* 🌸 Сакура */
 .sakura-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    pointer-events: none; /* чтобы не мешали кликам */
-    overflow: hidden;
-    z-index: 0; /* позади карточки */
+    height: 100%;
+    pointer-events: none;
 }
 
-/* Лепесток */
 .petal {
     position: absolute;
-    top: -50px;
-    width: 18px;
-    height: 18px;
-    background: radial-gradient(circle at 30% 30%, #ffb7da, #ff2e93);
-    border-radius: 60% 40% 60% 40%;
-    opacity: 0.8;
-    animation: fall linear infinite;
+    width: 15px;
+    height: 15px;
+    background: pink;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall 10s linear infinite;
 }
 
-/* Анимация падения с вращением и смещением по X */
+.petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+.petal:nth-child(2) { left: 20%; animation-delay: 2s; }
+.petal:nth-child(3) { left: 30%; animation-delay: 4s; }
+.petal:nth-child(4) { left: 40%; animation-delay: 1s; }
+.petal:nth-child(5) { left: 50%; animation-delay: 3s; }
+.petal:nth-child(6) { left: 60%; animation-delay: 5s; }
+.petal:nth-child(7) { left: 70%; animation-delay: 6s; }
+.petal:nth-child(8) { left: 80%; animation-delay: 7s; }
+.petal:nth-child(9) { left: 90%; animation-delay: 8s; }
+.petal:nth-child(10){ left: 95%; animation-delay: 9s; }
+
 @keyframes fall {
     0% {
-        transform: translateY(-50px) translateX(0px) rotate(0deg);
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
     }
     100% {
-        transform: translateY(110vh) translateX(100px) rotate(360deg);
+        top: 100%;
+        transform: translateX(100px) rotate(360deg);
     }
-}
-
-/* Разные позиции, скорости и задержки для реализма */
-.petal:nth-child(1)  { left: 5%;  animation-duration: 8s;  animation-delay: 0s; }
-.petal:nth-child(2)  { left: 15%; animation-duration: 12s; animation-delay: 2s; }
-.petal:nth-child(3)  { left: 25%; animation-duration: 10s; animation-delay: 4s; }
-.petal:nth-child(4)  { left: 35%; animation-duration: 14s; animation-delay: 1s; }
-.petal:nth-child(5)  { left: 45%; animation-duration: 9s;  animation-delay: 3s; }
-.petal:nth-child(6)  { left: 55%; animation-duration: 11s; animation-delay: 5s; }
-.petal:nth-child(7)  { left: 65%; animation-duration: 13s; animation-delay: 2s; }
-.petal:nth-child(8)  { left: 75%; animation-duration: 7s;  animation-delay: 6s; }
-.petal:nth-child(9)  { left: 85%; animation-duration: 15s; animation-delay: 1s; }
-.petal:nth-child(10) { left: 95%; animation-duration: 10s; animation-delay: 4s; }
-body {
-    min-height: 100vh;
-    background: url("sakura.jpg") no-repeat center center;
-    background-position: center 20%;
-    background-size: cover;
-    top: -200px;
-    
 }
 
 
