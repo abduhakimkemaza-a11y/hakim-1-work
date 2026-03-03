@@ -1,9 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>私の仕事</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>私の仕事</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Стили для календаря */
+.calendar-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: #2b0000;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    overflow: hidden;
+    display: none; /* Скрываем календарь по умолчанию */
+}
+
+.calendar-header {
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-name {
+    background: #660000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #990000;
+}
+
+.day {
+    min-height: 120px;
+    background: #330000;
+    color: white;
+    padding: 10px;
+    border: 1px solid #990000;
+    transition: 0.3s;
+    position: relative;
+}
+
+.day:hover {
+    background: #550000;
+    cursor: pointer;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.event {
+    font-size: 14px;
+    background: #990000;
+    padding: 4px 6px;
+    border-radius: 6px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.today {
+    background: #b30000 !important;
+    box-shadow: inset 0 0 10px #ff0000;
+}
+</style>
+<script>
+function showCalendar() {
+    const calendar = document.getElementById('calendar');
+    if(calendar.style.display === 'none') {
+        calendar.style.display = 'block';
+    } else {
+        calendar.style.display = 'none';
+    }
+}
+</script>
 </head>
 <body>
 
@@ -32,7 +114,6 @@
     </a>
 
     <h2>Любимое аниме</h2>
-
     <div class="video">
         <iframe 
             src="https://site.yummyani.me/catalog/item/van-pis-tv"
@@ -40,36 +121,90 @@
             allowfullscreen>
         </iframe>
     </div>
-
     <p><span>Жанр:</span> сёнен, приключения, фэнтези, пираты</p>
 
     <h2>Любимые песни</h2>
-
     <div class="music">
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/BnDY4jC7JZM" allowfullscreen></iframe>
         </div>
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/pf5zRhkgfhw" allowfullscreen></iframe>
         </div>
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/gcWGpA2Q44I" allowfullscreen></iframe>
         </div>
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/kEEAOaKQ7ms" allowfullscreen></iframe>
         </div>
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/-7asGU6mWYI" allowfullscreen></iframe>
         </div>
-
         <div class="video">
             <iframe src="https://www.youtube.com/embed/NwUGbGmMQos" allowfullscreen></iframe>
         </div>
+    </div>
+</div>
+
+<!-- ПЛАНЫ -->
+<section>
+    <h2>Мои планы</h2>
+    <button onclick="showCalendar()">Мои планы на месяц</button>
+</section>
+
+<!-- Календарь -->
+<div class="calendar-container" id="calendar">
+
+    <div class="calendar-header">
+        Февраль 2026 — Расписание
+    </div>
+
+    <div class="calendar">
+
+        <!-- Дни недели -->
+        <div class="day-name">Вс</div>
+        <div class="day-name">Пн</div>
+        <div class="day-name">Вт</div>
+        <div class="day-name">Ср</div>
+        <div class="day-name">Чт</div>
+        <div class="day-name">Пт</div>
+        <div class="day-name">Сб</div>
+
+        <!-- Неделя 1 -->
+        <div class="day today"><div class="date">1</div><div class="event">Сдать задание</div></div>
+        <div class="day"><div class="date">2</div><div class="event">Повторить уроки</div></div>
+        <div class="day"><div class="date">3</div><div class="event">Практика кода</div></div>
+        <div class="day"><div class="date">4</div><div class="event">Тренировка</div></div>
+        <div class="day"><div class="date">5</div><div class="event">Планирование</div></div>
+        <div class="day"><div class="date">6</div><div class="event">Подготовка к экзамену</div></div>
+        <div class="day"><div class="date">7</div><div class="event">Учебная группа</div></div>
+
+        <!-- Неделя 2 -->
+        <div class="day"><div class="date">8</div><div class="event">Проект</div></div>
+        <div class="day"><div class="date">9</div><div class="event">Отчет</div></div>
+        <div class="day"><div class="date">10</div><div class="event">Подготовка презентации</div></div>
+        <div class="day"><div class="date">11</div><div class="event">Отдых</div></div>
+        <div class="day"><div class="date">12</div><div class="event">Уборка</div></div>
+        <div class="day"><div class="date">13</div><div class="event">Чтение</div></div>
+        <div class="day"><div class="date">14</div><div class="event">День святого Валентина</div></div>
+
+        <!-- Неделя 3 -->
+        <div class="day"><div class="date">15</div><div class="event">Домашка</div></div>
+        <div class="day"><div class="date">16</div><div class="event">Командная встреча</div></div>
+        <div class="day"><div class="date">17</div><div class="event">Лабораторная</div></div>
+        <div class="day"><div class="date">18</div><div class="event">Фильм</div></div>
+        <div class="day"><div class="date">19</div><div class="event">Повторение</div></div>
+        <div class="day"><div class="date">20</div><div class="event">Организация файлов</div></div>
+        <div class="day"><div class="date">21</div><div class="event">Программирование</div></div>
+
+        <!-- Неделя 4 -->
+        <div class="day"><div class="date">22</div><div class="event">Контрольная</div></div>
+        <div class="day"><div class="date">23</div><div class="event">Сдать отчет</div></div>
+        <div class="day"><div class="date">24</div><div class="event">Проверка целей</div></div>
+        <div class="day"><div class="date">25</div><div class="event">Прогулка</div></div>
+        <div class="day"><div class="date">26</div><div class="event">Учеба</div></div>
+        <div class="day"><div class="date">27</div><div class="event">Подведение итогов</div></div>
+        <div class="day"><div class="date">28</div><div class="event">Свободный день</div></div>
 
     </div>
 </div>
@@ -90,6 +225,7 @@
 
 </body>
 </html>
+
 
 
 
